@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id = "text">Работает!</h1>
+
+		<button onclick="changeColor('blue');">Синий</button>
+		<button onclick="changeColor('red');">Красный</button>
+
+		<br>
+
+		<form name="myForm" action="" onsubmit="return validateForm()" method="post">
+			Имя: <input type="text" name="fname">
+			Телефон: <input type="text" name="ftel">
+			<input type="submit" value="Submit">
+		</form>
+
+
+    <script src="script.js"></script>
+		<script> 
+
+			function validateForm () {
+				var element = document.forms["myForm"]["fname"].value;
+				var tel = document.forms["myForm"]["ftel"].value;
+				if (element == "") {
+					alert ("Имя должно быть заполнено");
+					return false;
+				} else if (tel == "") {
+					alert ("Укажите ваш телефон");
+					return false;
+				}
+			}
+
+			// function changeColor (newColor) {
+			// 	var element = document.getElementById("text");
+			// 	element.style.color = newColor;
+			// }
+
+
+
+
+			// Объекты /////////////////////////////////
+
+			// function Fruit (color, shape) {
+			// 	this.color = color;
+			// 	this.shape = shape;
+			// }
+
+			// var melon = new Fruit ('yellow', 'round');
+
+
+			// var apple = new Object ();
+			// apple.color = 'green';
+			// apple.shape = 'round';
+
+			// apple.describe = function () {
+			// 	return 'An apple is ' + this.color;
+			// }
+
+			// console.log (apple.describe());
+
+			var person = {
+				firstName: 'Brad',
+				age: 45,
+				child: ['Liza', 'Sasha'],
+				address: {
+					street: '555 Some st.',
+					city: 'Boston',
+					state: 'MA'
+				},
+				NameAge: function () {
+					return this.firstName + ", age is - " + this.age;
+				}
+			}
+
+			console.log (person.NameAge ());
+
+
+
+
+			// Функции /////////////////////////////////
+
+			// function write (word) {
+			// 	document.write (word);
+			// }
+			// write ("Hello");
+			// write ("<br>");
+			// write ("World!");
+
+			// function summ (a, b) {
+			// 	return a + b;
+			// }
+			// document.write (summ (23, 34));
+
+
+
+
+
+			
+			// Операторы условий /////////////////////////////////
+
+			// if (1 != 1) {
+			// 	console.log ("1 равен 1");
+			// } else {
+			// 	console.log ("1 не равен 1");
+			// }
+
+
+
+
+
+			//Циклы /////////////////////////////////
+
+			// var res = 5;
+			// switch (res) {
+			// 	case 1:
+			// 		alert ("Res is 1");
+			// 		break;
+			// 	case 2:
+			// 		alert ("Res is 2");
+			// 	break;	
+			// 	case 3:
+			// 		alert ("Res is 3");
+			// 	break;	
+			// default:
+			// 	alert ("Res is unknown");
+			// }
+
+			// var i = 20;
+			// do {
+			// 	console.log (i);
+			// } while (i < 10);
+
+			// var i = 0;
+			// while (i <= 10) {
+			// 	console.log(i);
+			// 	i++;
+			// }
+
+			// var i = 200;
+			// while (i >= 10) {
+			// 	console.log(i);
+			// 	i /= 2;
+			// }
+
+
+			// for (var i = 100; i >= 10; i -= 10) {
+			// 	console.log(i);
+			// }
+
+
+
+
+
+			// //Массивы /////////////////////////////////
+
+			// var colors = new Array ("Red", "Blue", "Green");
+			// colors.push ("Grey")
+
+			// var colors = new Array ("Red", "Blue", "Green");
+			// for (var i = 0; i < colors.length; i++){
+			// 	console.log(colors [i]);
+			// }
+			
+
+
+
+
+		</script>
+</body>
+</html>
