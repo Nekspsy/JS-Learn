@@ -11,7 +11,7 @@
  * 5. Выведите значение переменной в консоль
  */
 
-let isStudent = ''
+let isStudent
 		isStudent = true
 		console.log(isStudent)
 		isStudent = false

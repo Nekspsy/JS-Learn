@@ -6,16 +6,15 @@
 
 
 // // Решение 1
-// 	console.log(Array.apply(null, { length: 100}).map(Number.call, Number).filter(item => {if (item % 3 === 0) return true}).length);
+// console.log(Array.apply(null, { length: 100}).map(Number.call, Number).filter(item => {if (item % 3 === 0) return true}).length);
 
 
 // // Решение 2
-// 	let count = 0;
-// 	for (let i = 0; i <= 100; i++) {
-// 		if (i % 3 === 0) count++;
-// 	}
-// 	console.log(count)
-
+// let count = 0;
+// for (let i = 0; i <= 100; i++) {
+// 	if (i % 3 === 0) count++;
+// }
+// console.log(count)
 
 
 // --------------------------------------------------------------
@@ -104,6 +103,7 @@
 // 	console.log('Number: ' + numTwo + ', отрицательное.')	
 // }
 
+
 // --------------------------------------------------------------
 // --------------------------------------------------------------
 // Дана строка. Выведите в консоль последний символ строки.
@@ -116,12 +116,11 @@
 // console.log(last.slice(-1))
 
 
-
 // --------------------------------------------------------------
 // --------------------------------------------------------------
 // Дано число. Проверьте, четное оно или нет.
 
-// Решение 1
+// // Решение 1
 // const num = 4
 // if (num % 2 === 0) {
 // 	console.log(`Число ${num} четное`)
@@ -129,13 +128,13 @@
 // 	console.log(`Число ${num} нечетное`)
 // 	}
 
-// Решение 2
+// // Решение 2
 // function even_or_odd(number) {
 // 	return number % 2 === 0 ? `Число ${number} четное` : `Число ${number} нечетное`
 // }
 // console.log(even_or_odd(4))
 
-// Решение 3
+// // Решение 3
 // const even = n => !(n % 2);
 // console.info(even(4));
 
@@ -145,10 +144,10 @@
 // --------------------------------------------------------------
 // Даны два слова. Проверьте, что первые буквы этих слов совпадают.
 
-// Решение 1
+// // Решение 1
 // let firstWord = 'Andrey'
 // let secondWord = 'Andrey'
-//  		// secondWord = 'Sergey'
+// // secondWord = 'Sergey'
 
 // const firstWordLetter = firstWord.substr(0, 1);
 // const secondWordLetter = secondWord.substr(0, 1);
@@ -162,9 +161,18 @@
 // }
 
 
-// Решение 2
-let name = 'john';
-console.log(name[0].toUpperCase());
+// // Решение 2
+// let name = 'john';
+// console.log(name[0].toUpperCase());
+
+
+// --------------------------------------------------------------
+// --------------------------------------------------------------
+// 
+
+
+
+
 
 
 

@@ -9,6 +9,8 @@
 
 const greeting = 'Good Morning'
 
-const updatedGreeting = greeting.replace('Morning', 'Evening')
+let updatedGreeting = greeting.replace('Morning', 'Evening')
+console.log(updatedGreeting)
 
+updatedGreeting = greeting.replace('Good', 'Bad')
 console.log(updatedGreeting)

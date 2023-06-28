@@ -11,8 +11,8 @@
 
 
 const user = {
-	name: 'Sergey',
-	surname: 'Podgaetsky',
+	name: 'Vasya',
+	surname: 'Pupkin',
 	favoriteNumber: 6
 }
 

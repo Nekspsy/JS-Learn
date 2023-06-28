@@ -10,6 +10,7 @@
 
 const myArray = ['Sergey', 32, true]
 
-console.log(typeof myArray[0])
+// console.log(typeof myArray[0]);
 
-console.log(myArray.length)
+console.log(myArray[0]);
+console.log(myArray.length);

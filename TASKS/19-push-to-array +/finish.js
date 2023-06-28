@@ -11,13 +11,14 @@
 const myArray = ['Sergey', 32, true, null]
 
 console.log(myArray)
-console.log(myArray.length)
+console.log('Длина масива: ' + myArray.length)
 
 myArray.push('Simferopol')
 
 console.log(myArray)
-console.log(myArray.length)
+console.log('Длина масива: ' + myArray.length)
 
 myArray.push(33, 34)
+
 console.log(myArray)
-console.log(myArray.length)
+console.log('Длина масива: ' + myArray.length)

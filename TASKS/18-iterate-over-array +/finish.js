@@ -8,10 +8,12 @@
 
 
 const myArray = ['Sergey', null, 32, true]
+const myArray2 = ['Sergey', null, 32, true]
 
 myArray.forEach( (el) => console.log(el) )
 
+// console.log('-----------')
 
-// myArray.forEach( (el) => {
-// 	console.log(el)
-// })
+myArray2.forEach( (el) => {
+	console.log(el)
+})

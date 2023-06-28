@@ -10,3 +10,11 @@
 
 const myNumber1 = 10 // 10 = 3 + 3 + 3 + 1
 const myNumber2 = 3
+
+const result = myNumber1 % myNumber2
+console.log(result);
+
+// Приоритетность оператора % - 13 (выше, чем у оператора + и -)
+// Ассоциативность оператора % - left-to-right
+
+console.log(((100 % 23) % 5) % 3) 

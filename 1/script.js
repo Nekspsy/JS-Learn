@@ -1,7 +1,7 @@
 	// alert ('Hello!');
 
-	// let myName = 'Sergey';
-	// let myLastName = 'Podgaetsky';
+	// let myName = 'Ilon';
+	// let myLastName = 'Mask';
 	// let myJob = 'Junior JS Developer';
 	// console.log ('Hi! My name is ' + myName + ' ' + myLastName + '. I am ' + myJob);
 	// console.log (`Hello! My name is ${myName} ${myLastName}. I am ${myJob}. (Второй вариант вывода)`);
@@ -15,7 +15,7 @@
 //  ------------------ 2. Создание и удаление свойств объектов ------------
 
 	// let myCity = {
-	// 	city: 'Simferopol'
+	// 	city: 'Moscow'
 	// }
 	// myCity.city = 'Yalta'
 	// myCity.popular = true
@@ -31,7 +31,7 @@
 //  ------------------------- 3. Вложенные свойства -----------------------
 
 	// let myCity2 = {
-	// 	city: 'Simferopol',
+	// 	city: 'Moscow',
 	// 	info: {
 	// 		isPopular: true,
 	// 		country: 'Russia'
@@ -177,42 +177,46 @@
 	// console.log(person4.name)
 	// console.log(person3.name)
 
-//  ----------------------ФУНКЦИИ-------------------------------
+//  -------------------------------------- 6. Функции -------------------------------------------
+// ----------------------------------------------------------------------------------------------
 
+//  ----------------------- 1. Что такое функция ------------------------------------
+
+	// ----- Пример без функции
 	// let a = 5
 	// let b = 3
 	// let c
 	// c = a + b
-	// console.log(c)
-
+	// console.log(c)  //8
 	// a = 8
 	// b = 12
 	// c = a + b
-	// console.log(c)
+	// console.log(c)  //20
 
+	// ----- Пример с функцией
 	// let a = 5
 	// let b = 3
 	// function sum(a, b) {
 	// 	const c = a + b
 	// 	console.log(c)
 	// }
-	// sum(a, b)
+	// sum(a, b)  //8
 	// a = 8
 	// b = 12
-	// sum(a, b)
+	// sum(a, b)  //20
 
+//  ----------------------- 2. Объявление и вызов функции ---------------------------
+
+	// ----- Пример
 	// function myFn(a, b) {
 	// 	let c
 	// 	a = a + 1
 	// 	c = a + b
 	// 	return c
 	// }
-	// console.log(myFn(10, 3))
-
-	// function myFn() {}
-	// myFN(	)
-
-//  ---------------Передача значения по ссылке------------------
+	// console.log(myFn(10, 3))  //14
+	
+//  ----------------------- 3. Передача значения по ссылке --------------------------
 
 	// const personOne = {
 	// 	name: 'Bob',
@@ -224,9 +228,9 @@
 	// }
 	// increasePersonAge(personOne)
 	// console.log(personOne.age)
+	
 
-//  ----------------Создание копии объекта----------------------
-
+	// ----- Создание копии объекта
 	// const personOne = {
 	// 	name: 'Bob',
 	// 	age: 21
@@ -239,24 +243,45 @@
 	// }
 
 	// const updatedPersonOne = increasePersonAge(personOne)
-	// console.log(personOne.age)
-	// console.log(updatedPersonOne.age)
+	// console.log(personOne.age)         //21
+	// console.log(updatedPersonOne.age)  //22
 
-//  ----------------------Колбэк функции------------------------
+//  ----------------------- 4. Колбэк функции ---------------------------------------
+	// ----- Пример
+	// function anotherFunction() {
+	// 	// Действия
+	// }
+	// function fnWithCallback(callbackFunction) {
+	// 	callbackFunction()
+	// }
+	// fnWithCallback(anotherFunction)
 
+	// ----- Пример
 	// function printMyName() {
 	// 	console.log('Sergey')
 	// }
 	// setTimeout(printMyName, 1000)
 
+//  ----------------------- 5. Правила работы с функциями ---------------------------
+	// Называть функции исходя из выполняемых задач
+	// Одна функция должна выполнять одну задачу
+	// Не рекомендуется изменять внешние относительно функции переменные
+
+
+
+
+
+
+
+
 //  ----------------Явный/Неявный возврат результата------------------
 
-	// // Явный возврат результата
+	// ----- Явный возврат результата
 	// const helloWorld = () => {
 	//   return 'Привет, мир!'
 	// }
 
-	// // Неявный возврат результата
+	// ----- Неявный возврат результата
 	// const helloWorld2 = () => 'Привет, мир!'
 
 	// console.log(helloWorld())
@@ -264,17 +289,17 @@
 
 //  -----------------Цепочка областей видимости--------------------
 
-	// const a = 5
+// 	const a = 5
 
-	// function myFn() {
+// 	function myFn() {
+// // 
+// 		function innerFn() {
+// 			console.log(a)
+// 		}
+// 		innerFn()
+// 	}
 
-	// 	function innerFn() {
-	// 		console.log(a)
-	// 	}
-	// 	innerFn()
-	// }
-
-	// myFn()
+// 	myFn()
 
 //  -----------------Жизненный цикл переменных-------------------
 
@@ -331,11 +356,11 @@
 
 
 //  -------------------12. Функциональные выражения и стрелочные функции-------------------------
-// ----------------------------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------------------------
 
-//  --------------------12.1 Функциональные выражения ---------------------
+//  -------------------- 12.1 Функциональные выражения ---------------------
 
-// Объявленная функция
+// ----- Объявленная функция
 	// function myFn(a, b) {
 	// 	let c
 	// 	a = a + 1
@@ -343,23 +368,37 @@
 	// 	return c
 	// }
 
-// Функциональное выражение
+// ----- Функциональное выражение
+	// function(a, b) {
+	// 	let c
+	// 	a = a + 1
+	// 	c = a + b 
+	// 	return c
+	// }
+
+// ----- Присваивание функционального выражения переменной
+	// const myFunction = function(a, b) {
+	// 	let c
+	// 	a = a + 1
+	// 	c = a + b
+	// 	return c
+	// }
+	// console.log(myFunction(5, 6))  //12
+
+// ----- Функциональное выражение как колбэк функция
 	// setTimeout(function() {
 	// 	console.log('колбэк функция')
 	// } , 2000)
 
 // ----- Функциональное выражение в вызове другой функции
-
 	// setTimeout(function() {
 	// 	console.log('Отложенное сообщение')
 	// }, 1000)
 
 
-
 // ----------------- 12.2 Стрелочные функции (всегда анонимны) -----------------
 
-// ----- пример стрелочной функции -----
-
+// ----- пример стрелочной функции 
 	// (a, b) => {
 	// 	let c
 	// 	a = a + 1 
@@ -367,76 +406,78 @@
 	// 	return c
 	// }
 
-// ----- присваиваем анонимной стрелочной функции имя через переменную
+// ----- Присваиваем имя стрелочной функции
+	// const myFunction = (a, b) => {
+	// 	let c
+	// 	a = a + 1
+	// 	c = a + b
+	// 	return c
+	// }
+	// console.log(myFunction(5, 3))  //9
 
-// 	const myFunction = (a, b) => {
-// 		let c
-// 		a = a + 1
-// 		c = a + b
-// 		return c
-// 	}
+// ----- присваиваем анонимной стрелочной функции имя через переменную
+	// 	const myFunction = (a, b) => {
+	// 		let c
+	// 		a = a + 1
+	// 		c = a + b
+	// 		return c
+	// 	}
 
 // // myFunction(5, 4)
 // 	console.log(myFunction(5, 3))
 
 // ----- присваиваем функциональное выражение переменной
-
 	// const myFunction = function(a, b) {   //  <- Анонимное функциональное выражение
 	// 	let c
 	// 	a = a + 1
 	// 	c = a + b
 	// 	return c
 	// }
-
 	// myFunction(5, 4)
 	// console.log(myFunction(5, 3))
 
 // ----- Стрелочная функция в вызове другой функции
-
 	// setTimeout(() => {
 	// 	console.log('Отложенное сообщение')
 	// }, 1000)
 
 // -----  Сокращение в стрелочных функциях
-
 	//  Если один параметр, то круглые скобки можно опустить
 	// 	a() => {
 	// 		тело функции
 	// }
 
-	//  Фигурные скобки можно опустить если тело функции состоит из одного выражения
-	// (a, b) => a + b
+//  Фигурные скобки можно опустить если тело функции состоит из одного выражения
+	// (a, b) => a + b  // В этом случае стрелочная функция неявно возвращает рез-т выражения
 
-//  --------------------12.3 Значение параметров функции по умолчанию---------------------
+//  -------------------- 12.3 Значение параметров функции по умолчанию ---------------------
 
 // ----- Значение параметров по умолчанию
 	// function multByFactor(value, multiplier = 1) {
 	// 	return value * multiplier
 	// }
-	// console.log(multByFactor(10,2))
-	// console.log(multByFactor(5))
+	// console.log(multByFactor(10,2))  // 20
+	// console.log(multByFactor(5))     // 5
 
 // ----- То же самое, стрелочной функцией     
-
 	// const multiByFactor = (value, multiplier = 1) => {
 	// 	return value * multiplier
 	// }
 	// console.log(multiByFactor(10,2))
 
 // ----- То же самое, анонимным функциональным выражением
-
 	// const multiByFactor = function(value, multiplier = 1) {
 	// 	return value * multiplier
 	// }
 	// console.log(multiByFactor(10,2))
 	// console.log(multiByFactor(5))
 
-//  ----------------- Пример 2 ------------------
-
+// ----- Пример 2 
 	// const newPost = (post, addedAt = Date()) => ({   // от "(" - неявный возврат объекта
 	// 	...post,
 	// 	addedAt
 	// })
+	// // console.log(newPost())
 
 	// const firstPost = {
 	// 	id: 1,
@@ -447,7 +488,6 @@
 	// console.table(newPost(firstPost))
 
 // ----- То же самое, с ЯВНЫМ возвратом объекта
-
 	// const newPost = (post, addedAt = Date()) => {
 	// 	const myPost = {
 	// 	...post,
@@ -463,34 +503,32 @@
 
 	// console.table(newPost(firstPost))
 
-//  ----------------- Пример 3 ------------------
-
-// ----- Пример 1: нормальное функциональное выражение
+// ----- Пример 3
+// ----- 1: нормальное функциональное выражение
 
 // 	const sayHi = function(name) {
 // 		return name;
 // 	}
 
-// ----- Пример 2: стрелочная функция с явным возвратом
+// ----- 2: стрелочная функция с явным возвратом
+// // Single-line
+// 		const sayHi = (name) => { return name }
 
-// Multi-line
+// // Multi-line
 // 	const sayHi = (name) => {
 // 		return name;
 // 	}
  
-// Single-line
-// 	const sayHi = (name) => { return name }
-
-// ----- Пример 3: стрелочная функция с неявным возвратом
-
-// Single-line
-// 	const sayHi = (name) => name
+// ----- 3: стрелочная функция с неявным возвратом
+// // Single-line
+// 		const sayHi = (name) => name
+// 		console.log(sayHi('Neks'))
  
-// Multi-line
+// // Multi-line
 	// const sayHi = (name) => (
 	// name = 'Hi, ' + name,
 	// 		name
-	// 	)
+	// )
 	// console.log(sayHi('Neks'))
 
 
@@ -508,7 +546,6 @@
 	// console.log('Continue... ')
 
 	// ----- TRY/CATCH
-	
 	// try {
 		// 	// Выполнение блока кода
 		// } catch (error) {
@@ -516,7 +553,6 @@
 	// }
 
 	// ----- Пример
-
 	// const fnWithError = () => {
 	// 	throw new Error('Some error')
 	// }
@@ -530,32 +566,30 @@
 
 	// console.log('Continue...')
 	
-//  ----------------------------------14. Инструкции---------------------------------------------
+// ---------------------------------- 14. Инструкции --------------------------------------------
 // ----------------------------------------------------------------------------------------------
 
-//  --------------------- 1. Инструкции ---------------------
+//  ----------------------- 1. Инструкции ------------------------------------
+// 	let a;                             //Инструкция
+// 	const b = 5;                       //Инструкция
 
-// 	let a;
-// 	const b = 5;
-
-// 	if (a > b) {
+// 	if (a > b) {                       //Инструкция
 // 		console.log('a is larger');
 // 	}
 
-// 	for (let i = 0; i++; i < 5) {
+// 	for (let i = 0; i++; i < 5) {      //Инструкция
 // 		console.log(i);
 // }
 
-//  ---------------- 2. Выражения-инструкции ----------------
-
-	// 'abc'
-	// a = a + 3;
-	// c = a + blur;
-	// d = 'Good' + 'Evening';
+//  ----------------------- 2. Выражения-инструкции --------------------------
+	// 'abc';                    //Выражения-инструкции
+	// a = a + 3;                //Выражения-инструкции
+	// c = a + blur;             //Выражения-инструкции
+	// d = 'Good' + 'Evening';   //Выражения-инструкции
 	// myFunction(c, d);
 	// console.log('Hey');
 
-//  ---------- 3. Как отличить инструкцию от выражения ------
+//  ---------------- 3. Как отличить инструкцию от выражения ------------------
 
 	// function myFn(a) {
 	// 	console.log(a);
@@ -567,13 +601,15 @@
 	// myFn(2 + 3)
 	// myFn(b)
 	// myFn(c = c + 1)
-	// myFn(c = c + 1;)
-	// myFn(let d)
+	// myFn(c = c + 1;)  //ошибка syntaxError из-за ;
+	// myFn(let d)       //ошибка из-за объявления переменной, а это инструкция
+
+
 
 //  -----------------------------------15. Массивы-----------------------------------------------
 // ----------------------------------------------------------------------------------------------
 
-//  --------------------- 1. Массивы ------------------------------------
+//  -------------------------- 1. Массивы ------------------------------------
 
 	// const myArray = [1, 2, 3]
 	// console.log(myArray)
@@ -581,7 +617,7 @@
 	// const myArray2 = new Array(1, 2, 3)
 	// console.log(myArray2)
 
-//  --------------------- 2. Оператор сравнения для массивов и объектов--
+//  ----------------- 2. Оператор сравнения для массивов и объектов ----------
 
 	// const myArray = [1, true, 'Sergey']
 	// console.log(myArray)
@@ -593,7 +629,7 @@
 	// console.log(myArray === myArray3)
 
 
-//  --------------------- 3. Массив против Объекта ----------------------
+//  ------------------------- 3. Массив против Объекта ------------------------
 
 	// ----- Массив
 	// const myObject = {
@@ -608,7 +644,7 @@
 	// const myArray = [1, 2, 3]
 	// console.log(myArray)
 
-//  --------------------- 4. Как работать с элементами массива ----------
+//  -------------------- 4. Как работать с элементами массива ------------------
 
 	// const myArray = [1, true, 'a']
 	// console.log(myArray)
@@ -619,7 +655,6 @@
 	// console.log(myArray.length)
 
 // ----- Длина массива
-
 	// const myArray = [1, 2, 3, 4]
 	// console.log(myArray)
 	// console.log(myArray.length)
@@ -633,9 +668,9 @@
 	// console.log(myArray)
 	// console.log(myArray.length)
 
-//  --------------------- 5. Методы массивов ----------------------------
+//  ------------------------ 5. Методы массивов -------------------------------
 
-	// ----- Метод PUSH (добавление элемента)
+	// ----- Метод PUSH (добавление элемента в конец)
 	// const myArray = [1, 2, 3]
 	// console.log(myArray)
 
@@ -645,7 +680,7 @@
 	// myArray.push(true)
 	// console.log(myArray)
 	
-	// ----- Метод POP (удаление элемента)
+	// ----- Метод POP (удаление последнего элемента)
 	// const myArray = [1, 2, 3]
 	// myArray.pop()
 	// console.log(myArray)
@@ -664,7 +699,7 @@
 	// myArray.unshift('abc')
 	// console.log(myArray)
 
-	// ----- Метод SHIFT (удвляет первый элемент в массиве)
+	// ----- Метод SHIFT (удаляет первый элемент в массиве)
 	// const myArray = [1, 2, 3]
 	// console.log(myArray)
 
@@ -675,15 +710,15 @@
 	// console.log(myArray)
 	// console.log(removedElement)
 
-//  --------------------- 6. Метод forEach ------------------------------
+//  ----------------------- 6. Метод forEach --------------------------------
 
-	// const myArray = [1, 2, 3, 10]
+	// const myArray = [1, 2, 3, 10, 7]
 	// console.log(myArray)
 
 	// myArray.forEach(el => console.log(el * 2))
 	// console.log(myArray)
 
-//  --------------------- 7. Метод map ----------------------------------
+//  ----------------------- 7. Метод MAP -------------------------------------
 
 	// const myArray = [1, 2, 3]
 	// console.log(myArray)
@@ -704,7 +739,18 @@
 	// console.log(newArray)
 	// console.log(myArray)
 
-//  -----------------------------------16. Деструктуризация-----------------------------------------------
+	// ----- Пример 2 c анонимным функциональным выражением
+	// const myArray = [1, 2, 3]
+	// console.log(myArray)
+
+	// const newArray = myArray.map(function(el) {
+	// 	return el * 3
+	// })
+
+	// console.log(newArray)
+	// console.log(myArray)
+
+//  --------------------------------16. Деструктуризация-----------------------------------------
 // ----------------------------------------------------------------------------------------------
 
 //  --------------------- 1. Деструктуризация объектов ------------------------------------
@@ -716,7 +762,7 @@
 	// 	hasSignedAgreement: false
 	// }
 
-	// // Объявление новых переменных и присванивание значений на основе значений свойств объекта
+	// Объявление новых переменных и присванивание значений на основе значений свойств объекта
 	// const { name, commentsQty } = userProfile
 	// const { hasSignedAgreement } = userProfile
 
@@ -742,7 +788,7 @@
 	// ----- Пример 1
 	// const fruits = ['Apple', 'Banana']
 
-	// // Объявление новых переменных и присваивание значений на основе элементов массива
+	// Oбъявление новых переменных и присваивание значений на основе элементов массива
 	// const [fruitOne, fruitTwo] = fruits
 
 	// console.log(fruitOne)
@@ -808,21 +854,21 @@
 
 	// ----- Пример IF
 	// let val = 10
-
 	// if (val > 5) {
 	// 	val += 20
 	// }
-
 	// console.log(val)
 
 	// ----- Пример IF c оператором отрицания
 	// const person = {
-	// 	age: 20
+	// 	age: 20,
+	// 	name: 'Sergey'
 	// }
-
 	// if (!person.name) {
 	// 	console.log('Имя не указано')
 	// 	//Другие действия, в случае, если свойства "name"  у объекта нет
+	// } else {
+	// 	console.log('Имя: ' + person.name + '. Возраст: ' + person.age)
 	// }
 
 
@@ -996,16 +1042,16 @@
 //  ----------------------- 2. Цикл for --------------------------------------
 // Все циклы - инструкции
 
-// for (Начальная инструкция; Условие: Итерационное действие) {
-// 	// Блок кода, выполняемый на каждой итерации
-// }
+	// for (Начальная инструкция; Условие: Итерационное действие) {
+	// 	// Блок кода, выполняемый на каждой итерации
+	// }
 
 	// for (let i = 0; i < 5; i++) {
 	// 	console.log(i)
 	// }
 
 
-//  ----------------------- 3. Для перебора массивов не нужен for ------------
+//  ------------------- 3. Для перебора массивов не нужен for ----------------
 // Используйте функции высшего порядка массивов: forEach, map, reduce
 	
 	// ----- Цикл FOR для массивов
@@ -1014,6 +1060,7 @@
 	// for (let i = 0; i < myArray.length; i++) {
 	// 	console.log(myArray[i])
 	// }
+
 
 	// ----- Метод массивов FOREACH
 	// const myArray = ['first', 'second', 'third']
@@ -1027,6 +1074,7 @@
 	// while (Условие) {
 	// 	// Блок кода, выполняемый на каждой итерации
 	// }
+
 
 	// ----- Цикл WHILE
 	// let i = 0
@@ -1055,7 +1103,7 @@
 	// 	// Значения свойства - Object[key]
 	// }
 
-	// ----- FOR IN для объектов
+	// // ----- FOR IN для объектов
 	// const myObject = {
 	// 	x: 10, 
 	// 	y: true,
@@ -1066,6 +1114,16 @@
 	// 	console.log(key, myObject[key])
 	// }
 
+	// // ----- FOR IN (мой тест)
+	// myObject = {
+	// 	name: 'Alex',
+	// 	age: 25
+	// }
+
+	// for ( key in myObject){
+	// 	console.log(key, myObject[key]);
+	// }
+
 //  ----------------------- 7. Методы keys и values для объектов -------------
 	
 	// ----- FOREACH для объектов
@@ -1074,10 +1132,10 @@
 	// 	y: true,
 	// 	z: 'abc'
 	// }
-
 	// Object.keys(myObject).forEach(key => {
 	// 	console.log(key, myObject[key])
 	// })
+
 
 	// ----- FOREACH для объектов
 	// const myObject = {
@@ -1085,11 +1143,10 @@
 	// 	y: true,
 	// 	z: 'abc'
 	// }
-	// // Трансформируем объект в массиви перебираем его
+	// // Трансформируем объект в массив и перебираем его
 	// Object.values(myObject).forEach(values => {
 	// 	console.log(values)
 	// })
-
 
 
 	// ----- Метод массивов FOREACH
@@ -1099,15 +1156,10 @@
 	// 	console.log(element)
 	// })
   
+
 //  ----------------------- 8. Цикл for in для массивов ----------------------
 	
 	// ----- FOR IN для массивов (не рекомендуется, лучше foreach)
-	// const myArray = [true, 10, 'abc', null]
-	// for (const key in myArray) {
-	// 	console.log(myArray[key])
-	// }
-
-	// ----- FOR IN для объектов
 	// const myArray = [true, 10, 'abc', null]
 	// for (const key in myArray) {
 	// 	console.log(myArray[key])
@@ -1123,7 +1175,7 @@
 
 
 	// ----- FOR OF для строк
-	// const myString = 'Хоп, хэй, лалалэй'
+	// const myString = 'Hello'
 
 	// for (const letter of myString) {
 	// 	console.log(letter)
@@ -1181,7 +1233,222 @@
 //  ----------------------- 6. Как используются модули в React --------------------
 
 
+//  ------------------------------- 21. Классы и прототипы --------------------------------------
+// ----------------------------------------------------------------------------------------------
 
+//  ----------------------- 1. Введение в классы и прототипы ----------------------
+	// Классы позволяют создавать прототипы для объектов
+	// На основании прототипов создаются экземпляры
+	// Экземпляры могут иметь собственные свойства и методы
+	// Экземпляры наследуют свойства и методы прототипов
+
+//  ----------------------- 2. Пример класса --------------------------------------
+
+	// ----- Пример класса
+	// class Comment {
+	// 	constructor(text) {   //constructor - метод
+	// 		this.text = text
+	// 		this.votesQty = 0
+	// 	}
+	// }
+
+	// upvote() {
+	// 	this.votesQty += 1
+	// }
+
+
+//  ----------------------- 3. Создание экземпляров класса ------------------------
+
+	// class Comment {
+	// 	constructor(text) {   //constructor - метод
+	// 		this.text = text
+	// 		this.votesQty = 0
+	// 	}
+	// }
+
+	// upvote() {
+	// 	this.votesQty += 1
+	// }
+
+	// const firstComment = new Comment('First comment') // Создаём экземпляр класса
+	// console.log(firstComment);
+
+	// ----- Наследование по цепочке
+	// firstComment -> Comment -> Object
+
+
+//  ----------------------- 4. Цепочка прототипов ---------------------------------
+
+	 // firstComment -> Comment -> Object
+
+//  ----------------------- 5. Проверка принадлежности классу ---------------------
+
+	// class Comment {
+	// 	constructor(text) {
+	// 		this.text = text
+	// 		this.votesQty = 0
+	// 	}
+		
+	// 	upvote() {
+	// 		this.votesQty +=1
+	// 	}
+	// }
+
+	// const firstComment = new Comment('First comment')
+
+	// console.log(firstComment instanceof Comment); //true, т.к firstComment является экземпляром Comment
+	// console.log(firstComment instanceof Object);
+
+
+//  ----------------------- 6. Вызов унаследованных методов -----------------------
+
+	// class Comment {
+	// 	constructor(text) {
+	// 		this.text = text
+	// 		this.votesQty = 0
+	// 	}
+
+	// 	upvote() {
+	// 		this.votesQty += 1
+	// 	}
+	// }
+
+	// const firstComment = new Comment('First comment')
+
+	// firstComment.upvote()
+	// console.log(firstComment.votesQty);  //1
+	// firstComment.upvote()
+	// console.log(firstComment.votesQty);  //2
+
+
+//  ----------------------- 7. Практика по созданию классов и экземпляров ---------
+
+	// const myObject = {}
+	// const myArray = []
+	
+	// firstComment.text
+
+	// firstComment.upvote()
+	// firstComment.votesQty
+
+
+//  ----------------------- 8. Проверка принадлежности свойств объектов -----------
+
+	// class Comment {
+	// 	constructor(text) {
+	// 		this.text = text
+	// 		this.votesQty = 0
+	// 	}
+
+	// 	upvote() {
+	// 		this.votesQty += 1
+	// 	}
+	// }
+
+	// const firstComment = new Comment('First comment')
+
+	// firstComment.hasOwnProperty('text')							// true
+	// firstComment.hasOwnProperty('votesQty')					// true
+	// firstComment.hasOwnProperty('upvote')						// false
+	// firstComment.hasOwnProperty('hasOwnProperty')		// false
+
+	// console.log(firstComment.hasOwnProperty('text'));		// true
+	// console.log(firstComment.hasOwnProperty('upvote'));	// false
+
+
+//  ----------------------- 9. Создание нескольких экземпляров --------------------
+
+	// class Comment {
+	// 	constructor(text) {
+	// 		this.text = text
+	// 		this.votesQty = 0
+	// 	}
+
+	// 	upvote() {
+	// 		this.votesQty += 1
+	// 	}
+	// }
+
+	// const firstComment = new Comment('First comment')
+	// const secondComment = new Comment('Second comment')
+	// const thirdComment = new Comment('Third comment')
+
+
+//  ----------------------- 10. Статические методы --------------------------------
+
+	// class Comment {
+	// 	constructor(text) {
+	// 		this.text = text
+	// 		this.votesQty = 0
+	// 	}
+
+	// 	upvote() {
+	// 		this.votesQty += 1
+	// 	}
+
+	// 	static mergeComments(first, second) {
+	// 		return `${first} ${second}`
+	// 	}
+	// }
+
+	// //Метод доступен как свойство класса и не наследуется экземплярами класса
+	// Comment.mergeComments('First comment.', 'Second coment')
+
+//  ----------------------- 11. Практика по созданию статических методов ----------
+
+	// class Comment {
+	// 	constructor(text) {
+	// 		this.text = text
+	// 		this.votesQty = 0
+	// 	}
+
+	// 	upvote() {
+	// 		this.votesQty += 1
+	// 	}
+
+	// 	static mergeComments(first, second) {
+	// 		return `${first} ${second}`
+	// 	}
+	// }
+
+	// console.dir(Comment.prototype)	// class Comment
+	// Comment.prototype								// {constructor: f, upvote: f}
+
+	// const myComment = new Comment('Awesome comment')	// undefined
+	// myComment	// Comment { text: 'Awesome comment', votesQty: 0}
+	// console.log(Comment.mergeComments('Some text', 'Some other text'));	// Some text Some other text
+
+
+//  ----------------------- 12. Расширение других классов -------------------------
+
+	// class NumbersArray extends Array {		// Родительский конструктор вызовется автоматически
+	// 	sum() {
+	// 		return this.reduce( (el, acc) => acc += el, 0)
+	// 	}
+	// }
+
+	// const myArray = new NumbersArray(2, 5, 7)
+	// console.log(myArray);					// 2, 5, 7
+	// console.log(myArray.sum());		// 14
+
+	// Созданная в итоге цепочка прототипов:
+	// myArray -> NumbersArray -> Array -> Object
+
+
+//  ----------------------- 13. Что же такое прототип -----------------------------
+
+	// Скрытое свойство. 
+	// Comment.prototype === firstComment.__proto__		// Вернёт true
+
+//  ----------------------- 14. Строки и числа ведут себя как объекты -------------
+	// Строки и числа ведут себя как объекты
+
+	// const myName = 'Sergey'
+	// console.log(myName)												// Sergey
+	// console.log(myName.toUpperCase());					// SERGEY
+	// const mySecondName = new String('Neksov')
+	// console.log(mySecondName)									// { 0: 'N', 1: 'e', 'k', 's', 'o', 'v' }
+	
 
 
 
@@ -1198,7 +1465,26 @@
 
 
 
+
+
 // Функция - это объект с медотодами. Например, Date() содержит методы (now: , parse: , ...)
+// Внутри функции не рекомендуется мутировать внешний объект
+// Функциональные выражения всегда анонимные
+	// 																				Объявленная функ-я			Функц-ое выражение
+	//  Имеет имя																			ДА										НЕТ
+	//  Можно исп. автономно													ДА										НЕТ
+	//  Можно присв. переменной												ДА										ДА
+	//  Можно исп. как арг. в вызове др. функции			ДА										ДА
+
+// Если выражение написано на отдельной строке - то это выражение-инструкция
+// Инструкция не может быть трансформирована в выражение
+// Выражения могут быть использованы как аргументы в вызовах функций
+// Экземпляры наследуют свойства и методы прототипов 
+
+// Классы позволяют создавать прототипы для объектов
+// На основании прототипов создаются экземпляры
+// Экземпляры могут иметь собственные свойства и методы
+
 // console.log() - метод log объекта console
 // Все циклы - инструкции
 // Практически все сущности в JS - объекты
