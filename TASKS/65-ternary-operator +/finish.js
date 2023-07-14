@@ -21,8 +21,26 @@ function isNumber(a) {
 console.log(isNumber(12))
 // 10 - это число
 
-console.log(isNumber('Привет'))
+console.log(isNumber('qwe'))
 // Привет - это не число
 
-console.log(isNumber(true))
+console.log(isNumber(false))
+// true - это не число
+
+
+// -----------------------------------
+console.log('-----------------------')
+
+
+const isNumber2 = (a) => {
+	return typeof a === 'number' ? `${a} - это число` : `${a} - это не число`
+}
+
+console.log(isNumber2(10))
+// 10 - это число
+
+console.log(isNumber2('Привет'))
+// Привет - это не число
+
+console.log(isNumber2(true))
 // true - это не число

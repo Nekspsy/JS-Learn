@@ -3,6 +3,8 @@
  * Измените функцию "isNumber", используя тернарный оператор
  */
 
+
+
 function isNumber(a) {
   if (typeof a === 'number') {
     return `${a} - это число`
