@@ -208,8 +208,17 @@
 
 // --------------------------------------------------------------
 // --------------------------------------------------------------
+	// let cc = ''
+
+	// function maskify(cc) {
+	// 	const maskifynum = cc.slice(-4).padStart(cc.length,'#')
+	// 	console.log(maskifynum)
+	// }
 
 
+	// maskify('4556364607935616')
+	// maskify('1')
+	// maskify('11111')
 
 
 
